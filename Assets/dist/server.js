@@ -106,6 +106,7 @@ async function addManager() {
 }
 //Requst to add an employee (will require the employee’s first name, last name, role, and manager)
 async function addEmployee() {
+    const managerId = await addManager(); // First add the manager to guaruntee an employee has a manager Null if not
     const { first_name, last_name, role } = await inquirer.prompt([
         {
             type: 'input',
@@ -121,6 +122,11 @@ async function addEmployee() {
             type: 'input',
             name: 'role',
             message: 'Enter the employee\'s role ID:',
+        },
+        {
+            type: 'input',
+            name: 'manager_id',
+            message: 'Enter the manager\'s ID:',
         }
     ]);
     // Check if the role exists in the roles table

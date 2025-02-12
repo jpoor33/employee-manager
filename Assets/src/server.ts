@@ -137,6 +137,11 @@ async function addEmployee() {
       type: 'input',
       name: 'role',
       message: 'Enter the employee\'s role ID:',
+    },
+    {
+      type: 'input',
+      name: 'manager_id',
+      message: 'Enter the manager\'s ID:',
     }
   ]);
 
