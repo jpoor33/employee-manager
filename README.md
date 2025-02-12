@@ -1,4 +1,4 @@
-#Employee manager
+# Employee manager
 
 App to add departments, roles & employees to your DB
 
